@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    background-color: blue;
+    color: white;
+    width: 50%;
+}
+
+.top{
+    display: flex;
+    justify-content: center;
+}
+
+.top > h1,.fa-brands{
+    padding: 15px 10px;
+}
+
+header > h2{
+    text-align: center;
+    padding: 15px 10px;
+}
+
+
+
+main{
+    background-color: lightblue;
+    width: 50%;
+}
+
+footer{
+    background-color: blue;
+    width: 50%;
+    color: white;
+    text-align: center;
+}
+
+.puiz_show > h2{
+    padding: 15px 20px;
+}
+
+.puiz_show > ol > li{
+    padding: 5px 50px;
+}
+
+.puiz_show {
+    padding-bottom: 30px;
+}
+
+footer{
+    padding: 30px 0px;
+}
+
+.profile{
+    text-align: right;
+    padding: 10px;
+}
