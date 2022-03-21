@@ -57,3 +57,39 @@ footer{
     text-align: right;
     padding: 10px;
 }
+
+/* quiz */
+.quiz > h2{
+    padding: 10px 20px;
+}
+
+.quiz > p{
+    padding: 10px 30px;
+}
+
+.choices{
+    padding: 20px 40px;
+}
+
+li{
+    padding: 10px;
+    margin: 10px;
+    border: solid;
+}
+
+ol {list-style-type: upper-latin;}
+
+.answer_box{
+    padding-top: 50px;
+    display:none;
+}
+
+.answer{
+    padding: 10px 15px;
+}
+
+.answer_text{
+    padding: 10px 20px;
+    padding-bottom: 40px;
+}
+
