@@ -6,11 +6,11 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam tenetur</p>
         </div>
         <div class="choices">
-            <ol>
-                <li>選択肢１</li>
-                <li>選択肢２</li>
-                <li>選択肢３</li>
-                <li>選択肢４</li>
+            <ol class="answers" data-id="question1">
+                <li data-answer="A">選択肢１</li>
+                <li data-answer="B">選択肢２</li>
+                <li data-answer="C">選択肢３</li>
+                <li data-answer="D">選択肢４</li>
             </ol>
         </div>
     </div>

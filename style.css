@@ -77,6 +77,10 @@ li{
     border: solid;
 }
 
+li:hover{
+    background-color: aquamarine;
+}
+
 ol {list-style-type: upper-latin;}
 
 .answer_box{
