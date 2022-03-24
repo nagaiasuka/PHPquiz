@@ -5,7 +5,7 @@ answersList.forEach(li => li.addEventListener('click',checkClickedAnser));
 
 // 正しい答え
 const correctAnswers ={
- question1:'A',
+ 1:'A',
 };
 
 // クリックした際の動き
