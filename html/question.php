@@ -1,5 +1,12 @@
 <?php
-$id = 1;
+// 関数の読み込み
+require __DIR__.'/../lib/functions.php';
+
+$id = '3';
+
+$data = fetchById($id);
+var_dump($data);
+
 $question = 'Laorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam tenetur';
 
 
