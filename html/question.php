@@ -23,7 +23,7 @@ $answer=strtoupper($data[6]);
 $answer_value=$answers[$answer];
 
 // 解説文
-$answer_text=$data[7];
+$answer_text=nl2br($data[7]) ;
 
 include __DIR__.'/../inc/quiz.php';
 ?>
