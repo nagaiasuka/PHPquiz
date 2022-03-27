@@ -6,24 +6,21 @@ $id = '3';
 
 $data = fetchById($id);
 
-$question =htmlspecialchars($data[1]) ;
+$formattedData = generateFormattedData($data);
+
+$question =$formattedData['question'];
 
 
-$answers=[
-    "A" =>htmlspecialchars($data[2]) ,
-    "B" =>htmlspecialchars($data[3]) ,
-    "C" =>htmlspecialchars($data[4]) ,
-    "D" =>htmlspecialchars($data[5]) ,
-];
+$answers=$formattedData['answers'];
 
 // 答え（ABCD）
-$answer=strtoupper(htmlspecialchars($data[6]));
+$answer=$formattedData['correctAnswer'];
 
 // 答えの文字
 $answer_value=$answers[$answer];
 
 // 解説文
-$answer_text=nl2br(htmlspecialchars($data[7])) ;
+$answer_text=$formattedData['explanation'];
 
 include __DIR__.'/../inc/quiz.php';
 ?>
