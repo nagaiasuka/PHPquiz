@@ -36,8 +36,14 @@ $answer_text=$formattedData['explanation'];
 $result = $selectedAnswer === $answer;
 
 
-echo $result;
-var_dump($result);
-echo $answer;
-echo $answer_value;
-echo $answer_text;
+
+
+$response = [
+    'result' =>$result,
+    'answer' =>$answer,
+    'answer_value' =>$answer_value,
+    'answer_text' =>$answer_text,
+];
+
+
+echo json_encode($response);
