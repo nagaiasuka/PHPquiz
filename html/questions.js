@@ -3,10 +3,7 @@ const answersList = document.querySelectorAll('ol.answers li');
 
 answersList.forEach(li => li.addEventListener('click',checkClickedAnser));
 
-// 正しい答え
-const correctAnswers ={
- 1:'A',
-};
+
 
 // クリックした際の動き
 function checkClickedAnser(event){
@@ -17,8 +14,6 @@ function checkClickedAnser(event){
     const selectedAnswer = clickedAnswerElement.dataset.answer;
 
     const questionId = clickedAnswerElement.closest('ol.answers').dataset.id;
-    // 正しい答え
-    const correctAnswer = correctAnswers[questionId];// フォームデータの入れ物を作る
 
     const formData = new FormData();
     
@@ -34,35 +29,58 @@ function checkClickedAnser(event){
 
     // フォームデータを送信
     xhr.send(formData);
+    xhr.addEventListener('loadend', function(event){
+        /** @type {XMLHttpRequest} */
+        const xhr =event.currentTarget;
+
+        // リクエストが成功したかステータスコードで確認
+        if (xhr.status===200){
+            // jsonをオブジェクトに変換
+            const response = JSON.parse(xhr.response);
+            const result = response.result;
+            const answer = response.answer;
+            const answer_value= response.answer_value;
+            const answer_text = response.answer_text;
+
+            displayResult(result,answer,answer_value,answer_text);
+        } else{
+            alert('Error: 回答データの取得に失敗しました');
+        }
+    });
 
 
-    const result = selectedAnswer === correctAnswer
-    displayResult(result);
+  
 }
 
 
 
-function displayResult(result){
-      // メッセージを入れる変数
-      let message;
-      // カラーコード入れる変数
-      let answercolor;
-  
-      // 答えが正しいか判定
-      if(result){
-          // 正しい答えだった場合
-          message = '正解！正しい答えです。';
-          answercolor = 'blue';
-      }else{
-          // 間違えた答えだった場合
-          message = '残念！不正解です。';
-          answercolor = 'red';
-      }
-  
-      alert(message);
-  
-      // 答えを間違った際に色を変更する
-      document.querySelector('.answer').style.color = answercolor;
-      // 答えを表示
-      document.querySelector('.answer_box').style.display = 'block';
+function displayResult(result,answer,answer_text,answer_value){
+    // メッセージを入れる変数
+    let message;
+    // カラーコード入れる変数
+    let answercolor;
+
+    // 答えが正しいか判定
+    if(result){
+        // 正しい答えだった場合
+        message = '正解！正しい答えです。';
+        answercolor = 'blue';
+    }else{
+        // 間違えた答えだった場合
+        message = '残念！不正解です。';
+        answercolor = 'red';
+    }
+
+    alert(message);
+
+    //正解の内容をHTMLに組み込む
+    document.querySelector('span#answer').innerHTML = answer + '. ' + answer_text;
+    document.querySelector('span#answer_text').innerHTML = answer_value;
+
+
+
+    // 答えを間違った際に色を変更する
+    document.querySelector('.answer').style.color = answercolor;
+    // 答えを表示
+    document.querySelector('.answer_box').style.display = 'block';
 }
