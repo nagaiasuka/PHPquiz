@@ -2,6 +2,7 @@
 // 関数の読み込み
 require __DIR__.'/../lib/functions.php';
 
+// $id =2;
 $id =escape($_GET['id'] ?? '');
 
 $data = fetchById($id);
