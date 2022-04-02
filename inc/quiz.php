@@ -22,7 +22,7 @@
 
 
     <div>
-        <a href="top.php">戻る</a>
+        <a href="index.php">戻る</a>
     </div>
 
 </main>

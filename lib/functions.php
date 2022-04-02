@@ -16,6 +16,26 @@ function error404(){
     exit(0);
 }
 
+function fetchAll(){
+    // ファイルを開く
+    $handler= fopen(__DIR__.'/data.csv', 'r');
+
+    // データをを取得
+    $questions =[];
+    while($row = fgetcsv($handler)){
+        if(isDataRow($row)){
+            $questions[] =$row;
+        }
+    }
+    
+    // ファイルを閉じる
+    fclose($handler);
+
+    // データを返す
+    return $questions;
+
+}
+
 function fetchById($id){
     // ファイルを開く
     $handler= fopen(__DIR__.'/data.csv', 'r');
