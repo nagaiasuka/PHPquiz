@@ -21,9 +21,13 @@
     </div>
 
 
-    <div>
-        <a href="index.php">戻る</a>
-        <a href="question.php?id=<?php echo intval($id) +1?>">次に</a>
+    <div class="buttons">
+        <div class="button01">
+            <a href="index.php" >戻る</a>
+        </div>
+        <div class="button02">
+            <a href="question.php?id=<?php echo intval($id) +1?>">次に</a>
+        </div>
     </div>
 
 </main>
