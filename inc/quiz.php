@@ -23,6 +23,7 @@
 
     <div>
         <a href="index.php">戻る</a>
+        <a href="question.php?id=<?php echo intval($id) +1?>">次に</a>
     </div>
 
 </main>
