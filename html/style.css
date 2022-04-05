@@ -9,6 +9,7 @@ header{
     width: 1000px;
     margin-right: auto;
     margin-left: auto;
+    height: 20vh;
 }
 
 .top{
@@ -65,7 +66,7 @@ footer{
 }
 
 footer{
-    padding: 30px 0px;
+    height: 10vh;
 }
 
 .profile{
@@ -202,4 +203,61 @@ ol {list-style-type: upper-latin;}
 }
 .button02 a:hover:after {
   right: 1.4rem;
+}
+
+.contact_group{
+    height: 100％;
+  
+}
+
+.form_area{
+    border: none;
+    /* border: solid 2px #696969; */
+    border-radius: 15px;
+    width: 50vh;
+    margin: auto auto;
+    background-color: #FFFACD;
+    text-align: center;
+    
+}
+
+.content1{
+    height: 70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+input#name,input#email,textarea#message{
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid 	#696969;
+    margin: 20px 0px;
+    padding: 10px 5px;
+
+}
+input[type="submit"] {
+	width: 20%;
+    font-size: 15px;
+    color: #fff;
+	display: inline-block;
+    padding: 15px 0px;
+    text-align: center;
+	background-color: #5c87a6;
+    border: 1px solid #5c87a6;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 1s;
+    margin-bottom: 30px;
+}
+
+/*--hover--*/
+input[type="submit"]:hover {
+    color: #5c87a6;
+    background-color: #ffffff;
+    border: 1px solid #5c87a6;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 1s;
 }

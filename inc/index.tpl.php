@@ -1,7 +1,7 @@
 <?php include'header.php' ?>
 <main>
     <div class="profile">
-        <i class="fa-solid fa-user">管理者</i>
+        <i class="fa-solid fa-envelope"><a href="">お問合せ</a></i>
     </div>
     <div class="puiz_show">
         <h2>問題一覧</h2>
